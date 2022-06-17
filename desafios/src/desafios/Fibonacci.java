@@ -29,12 +29,20 @@ public class Fibonacci {
 	
 	public void compara(int x) {
 		Boolean v = false;
-		for (int j = 0; j < 40; j++) {
+		int j = 0;
+		int i = 0;
+		do{
 			long valor = fib(j);
 			if(valor == x) {
 				v = true;
+				i = 1;
 			}
-		}
+			if(valor>x) {
+				i = 1;
+			}
+			j++;
+		}while (i != 1);
+		
 		if(v == true) {
 			System.out.println("O numero: " + x + " pertence a sequencia de Fibonacci");
 		}
